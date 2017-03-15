@@ -1,0 +1,22 @@
+{% extends "rest_framework/api.html"%}
+
+{%block breadcrumbs%}
+<div  class="table-responsive" style="padding:20px 20px 20px 20px ">
+<table class="table table-striped">
+<tr>
+<th>Author ID</th>
+<th>Author Name</th>
+<th>Email ID</th>
+<th>DOB</th>
+</tr>
+{%for item in serializer%}
+<tr>
+<td>{{item.author_id}}</td>
+<td>{{item.author_name}}</td>
+<td>{{item.author_email_id}}</td>
+<td>{{item.date_of_birth}}</td>
+</tr>
+{%endfor%}
+</table>
+</div>
+{%endblock%}
